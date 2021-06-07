@@ -40,6 +40,18 @@ public class User {
     Collection<Role> role= new ArrayList<Role>();
 
 
+    public User(int userId,String companyName,String companyAddress, String companyNip, String name, String lastName, String email, String password) {
+        this.userId=userId;
+        this.companyName = companyName;
+        this.companyAddress = companyAddress;
+        this.companyNip = companyNip;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        role.add(Role.pracownik);
+        role.add(Role.kierowca);
+    }
 
 
     public User(String companyName,String companyAddress, String companyNip, String name, String lastName, String email, String password) {

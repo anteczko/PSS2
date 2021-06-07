@@ -20,6 +20,6 @@ public class Pss2Application {
 	@EventListener(ApplicationReadyEvent.class)
 	public void afterStartup(){
 		System.out.println("[!] Hello world!!!");
-		userRepository.save(new User("test","test","test","test","test","test","test"));
+		//userRepository.save(new User("test","test","test","test","test","test","test"));
 	}
 }
