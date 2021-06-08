@@ -6,6 +6,7 @@ import com.example.demo.service.DelegationService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -21,11 +22,6 @@ public class SiteController {
     }
     UserService userService;
     DelegationService delegationService;
-
-    @RequestMapping("/")
-    public String hello(){
-        return "Hello world!!!";
-    }
 
     @GetMapping("/users")
     public List<User> getAllUsers(){

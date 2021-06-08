@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello Spring Boot!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <div th:fragment="navbar">
+        <table width="100%" style="background-color:grey;">
+            <tr align="center" style="font-weight:bold;">
+                <td width="20%">
+                    <a href="/">Strona głowna</a>
+                <td width="80%">
+                    <a href="/panel">Panel użytkownika</a>
+                </td>
+                <td width="20%">
+                    <a href="/register">Rejestracja</a>
+                    <a href="/login">Zaloguj</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<footer th:fragment="footer" style="background-color:lightblue;">
+    <center>
+    Wykonał Antoni Malak 2021 gr.1 nr albumu 108650
+    </center>
+</footer>
+</body>
+</html>

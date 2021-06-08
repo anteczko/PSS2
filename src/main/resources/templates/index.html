@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello Spring Boot!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head >
+<body>
+<div th:insert="fragments/navbar.html :: navbar">
+
+</div>
+<h1>
+    <center>Witamy na stronie!</center>
+</h1>
+
+<center>
+    <p>Zapraszamy do zalogowania się lub rejestracji do systemu</p>
+</center>
+
+
+<footer th:insert="fragments/navbar.html :: footer"></footer>
+
+</body>
+</html>

@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,7 +30,7 @@ public class User {
     @NotNull String name;
     @NotNull String lastName;
     @NotNull String email;
-    @NotNull String password;
+    @NotNull @Size(min = 6, max=20) String password;
     boolean status=true;
     LocalDateTime registrationDate=java.time.LocalDateTime.now();
 
