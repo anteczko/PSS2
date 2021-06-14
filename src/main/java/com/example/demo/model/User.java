@@ -6,10 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,7 +34,9 @@ public class User {
     @NotNull String email;
     @NotNull @Size(min = 6, max=20) String password;
     boolean status=true;
-    LocalDateTime registrationDate=java.time.LocalDateTime.now();
+    //LocalDateTime registrationDate=java.time.LocalDateTime.now();
+    @DateTimeFormat(pattern = "yyyy-MMM-dd")
+    LocalDate registrationDate=java.time.LocalDate.now();
 
     //Role role=Role.pracownik;
     //ArrayList<Role> role= new ArrayList<Role>();
@@ -52,7 +56,7 @@ public class User {
         this.email = email;
         this.password = password;
         role.add(Role.pracownik);
-        role.add(Role.kierowca);
+        //role.add(Role.kierowca);
     }
 
 
@@ -65,6 +69,6 @@ public class User {
         this.email=email;
         this.password=password;
         role.add(Role.pracownik);
-        role.add(Role.kierowca);
+        //role.add(Role.kierowca);
     }
 }

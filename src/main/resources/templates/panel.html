@@ -13,16 +13,26 @@
 
 <center>
 
-    <table>
+    <table align="center">
         <tr>
-            <th>ID</th>
-            <th>name</th>
-            <th>email</th>
+            <td>userId</td>
+            <td>name</td>
+            <td>email</td>
+            <td>companyName</td>
+            <td>companyAddress</td>
+            <td>companyNip</td>
+            <td>lastName</td>
+            <td>password</td>
         </tr>
-        <tr th:each="user : ${userList}"}>
+        <tr th:each="user : ${user}"}>
             <td th:text="${user.userId}"></td>
             <td th:text="${user.name}"></td>
-            <td th:text="${user.emial}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.companyName}"></td>
+            <td th:text="${user.companyAddress}"></td>
+            <td th:text="${user.companyNip}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.password}"></td>
         </tr>
     </table>
 

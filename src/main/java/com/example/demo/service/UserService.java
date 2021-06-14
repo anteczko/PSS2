@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.model.User;
 import com.example.demo.model.enums.Role;
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,20 @@ public class UserService {
     private UserRepository userRepository;
 
     public User registerUser(User user){ return userRepository.save(user); }
+
+    public User registerUser(UserDto userDto){
+        User user = new User(
+                userDto.getCompanyName(),
+                userDto.getCompanyAddress(),
+                userDto.getCompanyNip(),
+                userDto.getName(),
+                userDto.getLastName(),
+                userDto.getEmail(),
+                userDto.getPassword()
+        );
+
+        return userRepository.save(user);
+    }
 
     public List<User> getAllUsers(){ return userRepository.findAll(); }
 

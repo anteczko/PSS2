@@ -12,16 +12,18 @@
 </h1>
 
 <center>
-<form action="#" th:action="@{/user/register}" th:object="${user}" method="post">
-    <p>email <input type="text"/></p>
-    <p>password <input type="password"/></p>
-    <p>repeat password <input type="password"/></p>
+<form action="#" th:action="@{/register}" th:object="${user}" method="POST">
 
-    <p>companyName<input type="text" /></p>
-    <p>companyAddress<input type="text" /></p>
-    <p>companyNip<input type="text" /></p>
-    <p>name<input type="text" /></p>
-    <p>lastName<input type="text" /></p>
+    <p>email </p> <input type="text" th:field="*{email}" />
+    <p>password </p> <input type="password" th:field="*{password}" />
+    <p>repeat password </p> <input type="password"/>
+
+    <p>name </p> <input type="text" th:field="*{name}"/>
+    <p>lastName </p> <input type="text" th:field="*{lastName}" />
+
+    <p>companyName </p> <input type="text" th:field="*{companyName}" />
+    <p>companyAddress </p> <input type="text" th:field="*{companyAddress}" />
+    <p>companyNip </p> <input type="text" th:field="*{companyNip}" />
 
 
     <p>
